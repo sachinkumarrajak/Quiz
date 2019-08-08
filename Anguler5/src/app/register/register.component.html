@@ -1,0 +1,51 @@
+<ul style="list-style-type:none" class="cb-slideshow">
+  <li><span>Image 01</span><div></div></li>
+  <li><span>Image 02</span><div></div></li>
+  <li><span>Image 03</span><div></div></li>
+  <li><span>Image 04</span><div></div></li>
+  <li><span>Image 05</span><div></div></li>
+  <li><span>Image 06</span><div></div></li>
+</ul>
+
+
+
+<p class="text-warning" style="font-size: 30px;text-align: center">Quiz play and win prizes</p>
+<div class="container ">
+    <div class="row">
+
+      
+    
+      </div>
+
+    <div class="row" >
+        <div class="col-md-4 well col-md-offset-4" >
+            <p class="text-warning" style="font-size: 30px;text-align: center">Signup with Email</p>
+<form #registerForm="ngForm" (ngSubmit)="OnSubmit(Name.value,Email.value)">
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">account_circle</i>
+        <input type="text" name="Name" #Name ngModel required>
+        <label style="color:blue">Name</label>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mail_outline</i>
+          <input type="text"  name="Email" #Email ngModel required [pattern]="emailPattern">
+          <label style="color:blue">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="input-field col s12">
+            <button class="btn-large btn-submit" type="submit" [disabled]="!registerForm.valid">Start</button>
+          </div>
+        </div>
+    </form>  
+  </div>
+    </div>
+</div>
+
+
+
